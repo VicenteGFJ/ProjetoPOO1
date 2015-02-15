@@ -30,7 +30,7 @@ public class RegistroController implements Initializable, ControlledScreen {
     private TextField usuarioReg;
 
     @FXML
-    private TextField senhaReg;
+    private PasswordField senhaReg;
 
     @FXML
     private TextField emailReg;
