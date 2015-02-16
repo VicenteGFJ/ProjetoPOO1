@@ -77,12 +77,18 @@ public class RegistroController implements Initializable, ControlledScreen {
         try {
                 FileWriter file = new FileWriter ("users.txt");
                 BufferedWriter writer = new BufferedWriter (file);
-                for (int i=0;i<lista.size(); i++){
-                    writer.write(lista.get(i).toString());
+                for (String info : lista) {
+                    writer.write(info);
                     writer.newLine();
                 }
                 writer.close();
                 file.close();
+                /*for (int i=0;i<lista.size(); i++){
+                    writer.write(lista.get(i).toString());
+                    writer.newLine();
+                }
+                writer.close();
+                file.close();*/
                       
                     
 
