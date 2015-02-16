@@ -25,6 +25,9 @@ public class RegistroController implements Initializable, ControlledScreen {
 
     @FXML
     private PasswordField senhaReg;
+    
+    @FXML
+    private PasswordField confirmarReg;
 
     @FXML
     private Label campoRegistro;
@@ -54,21 +57,25 @@ public class RegistroController implements Initializable, ControlledScreen {
     @FXML
     private void voltarLogin(ActionEvent event) { 
         salvarArquivo();
-        limparCampos();
+        limparCampos(1);
         myController.setScreen(Main.telaInicial);
     }
-    
-    private void limparCampos (){ //private ou public?
-        usuarioReg.setText("");
-        senhaReg.setText("");
-     //   emailReg.setText("");
+     
+    @FXML
+    public void compararSenhas(ActionEvent event){
+        if(senhaReg.getText().equals(confirmarReg.getText())){
+            salvarCampos();
+        }else{
+            campoRegistro.setText("As senhas não correspondem!");
+            limparCampos(2);
+        }
     }
     
-    public void salvarCampos(ActionEvent event){
+    public void salvarCampos(){
             String data = usuarioReg.getText() + "/" + senhaReg.getText();
             lista.add(data);
             campoRegistro.setText("Dados salvos com sucesso!");
-            limparCampos();
+            limparCampos(1);
     }
     public void salvarArquivo(){
         
@@ -90,9 +97,17 @@ public class RegistroController implements Initializable, ControlledScreen {
         }catch(IOException ex){
             System.out.println(" error no arquivo");
             ex.printStackTrace();
+        }   
+    }
+    
+    private void limparCampos (int op){ // Para poder usar o mesmo método , na hora de comparar as senhas e limpar normal
+        if (op==1){
+            usuarioReg.setText("");
+            senhaReg.setText("");
+            confirmarReg.setText("");
+        }else if(op==2){
+            senhaReg.setText("");
+            confirmarReg.setText("");
         }
-        
-        
-        
     }
 }

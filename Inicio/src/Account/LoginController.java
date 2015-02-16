@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Account;
 
 /**
@@ -70,6 +65,7 @@ public class LoginController implements Initializable, ControlledScreen {
         if (recuperada.contains(dados)) {
             irParaPagina1();
         } else {
+            limparCampos();
             campoLogin.setText("Usuário e/ou Senha incorretos!");
         }
     }
@@ -88,6 +84,11 @@ public class LoginController implements Initializable, ControlledScreen {
             System.out.println("Error ao carregar arquivo");
             ex.printStackTrace();
         }
+    }
+
+    private void limparCampos() {
+        usuario.setText("");
+        senha.setText("");
     }
 
 }
