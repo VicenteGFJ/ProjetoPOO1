@@ -32,7 +32,7 @@
             <HBox layoutX="136.0" layoutY="166.0" prefHeight="25.0" prefWidth="247.0" spacing="100.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="0.0">
                <children>
                   <Button fx:id="voltar" layoutX="76.0" layoutY="132.0" mnemonicParsing="false" onAction="#voltarLogin" prefHeight="25.0" prefWidth="74.0" text="Voltar" AnchorPane.bottomAnchor="13.0" />
-                  <Button fx:id="finalizarRegistro" layoutX="251.0" layoutY="132.0" mnemonicParsing="false" onAction="#compararSenha" prefHeight="25.0" prefWidth="74.0" text="Registrar" AnchorPane.bottomAnchor="13.0" />
+                  <Button fx:id="finalizarRegistro" layoutX="251.0" layoutY="132.0" mnemonicParsing="false" onAction="#compararSenhas" prefHeight="25.0" prefWidth="74.0" text="Registrar" AnchorPane.bottomAnchor="13.0" />
                </children>
             </HBox>
             <Label fx:id="campoRegistro" alignment="CENTER" layoutX="151.0" layoutY="137.0" prefHeight="17.0" prefWidth="144.0" textFill="#d00b0b" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="37.0" />
