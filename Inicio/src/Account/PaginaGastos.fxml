@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Account.PaginaGastosController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane>
+         <children>
+            <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Janeiro">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Data" />
+                            <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                          </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Fevereiro">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

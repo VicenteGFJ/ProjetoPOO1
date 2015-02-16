@@ -34,12 +34,12 @@ public class LoginController implements Initializable, ControlledScreen {
 
     @FXML
     private Button entrar;
-    
+
     @FXML
     private Label campoLogin;
 
     ScreensController myController;
-    
+
     ArrayList<String> recuperada = new ArrayList<>();
 
     @Override
@@ -53,38 +53,45 @@ public class LoginController implements Initializable, ControlledScreen {
     }
 
     @FXML
-    public void irParaRegistro(ActionEvent event) { 
+    public void irParaRegistro(ActionEvent event) {
         myController.setScreen(Main.telaRegistro);
     }
+
     @FXML
-    public void compararCampos(ActionEvent event){
+    private void irParaPagina1(ActionEvent event) {
+        compararCampos();
+        myController.setScreen(Main.telaPagina1);
+    }
+
+        public void compararCampos() {
         String dados = usuario.getText() + "/" + senha.getText();
-        
+
         recuperarCampos();
-        
-        if(recuperada.contains(dados)){
+
+        if (recuperada.contains(dados)) {
             //irParaConta();
             campoLogin.setText("Entrando ....");
-        } else{
+        } else {
             campoLogin.setText("Usuário e/ou Senha incorretos!");
         }
-        
-        
+
     }
-    public void recuperarCampos(){
-        try{
+
+    public void recuperarCampos() {
+        try {
             FileReader fileReader = new FileReader("users.txt");
             BufferedReader reader = new BufferedReader(fileReader);
             String line = null;
-            while((line= reader.readLine())!=null){
+            while ((line = reader.readLine()) != null) {
                 recuperada.add(line);
             }
-        }catch(IOException ex) {
+        } catch (IOException ex) {
             System.out.println("Error ao carregar arquivo");
             ex.printStackTrace();
         }
     }
-    public void irParaConta(){
+
+    public void irParaConta() {
         //muda de tela aqui
     }
 

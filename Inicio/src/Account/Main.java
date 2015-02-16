@@ -20,12 +20,19 @@ public class Main extends Application {
     public static String telaInicialFile = "Login.fxml";
     public static String telaRegistro = "registro";
     public static String telaRegistroFile = "Registro.fxml";
+    public static String telaPagina1 = "Pagina1";
+    public static String telaPagina1File = "Pagina1.fxml";
+    public static String telaPaginaGastos = "PaginaGatos";
+    public static String telaPaginaGastosFile = "PaginaGastos.fxml";
+    
 
     @Override
     public void start(Stage stage) /*throws Exception*/ {
         ScreensController telas = new ScreensController();
         telas.loadScreen(Main.telaInicial, Main.telaInicialFile);
         telas.loadScreen(Main.telaRegistro, Main.telaRegistroFile);
+        telas.loadScreen(Main.telaPagina1, Main.telaPagina1File);
+        telas.loadScreen(Main.telaPaginaGastos, Main.telaPaginaGastosFile);
 
         telas.setScreen(Main.telaInicial);
         
