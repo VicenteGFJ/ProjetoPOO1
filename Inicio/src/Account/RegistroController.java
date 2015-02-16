@@ -4,9 +4,7 @@ package Account;
  *
  * @author Vicente
  */
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.File;
+import java.io.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -29,7 +27,7 @@ public class RegistroController implements Initializable, ControlledScreen {
     private PasswordField senhaReg;
 
     @FXML
-    private Label campoAviso;
+    private Label campoRegistro;
 
     @FXML
     private Button registrar;
@@ -69,7 +67,7 @@ public class RegistroController implements Initializable, ControlledScreen {
     public void salvarCampos(ActionEvent event){
             String data = usuarioReg.getText() + "/" + senhaReg.getText();
             lista.add(data);
-            campoAviso.setText("Dados salvos com sucesso!");
+            campoRegistro.setText("Dados salvos com sucesso!");
             limparCampos();
     }
     public void salvarArquivo(){
@@ -89,9 +87,6 @@ public class RegistroController implements Initializable, ControlledScreen {
                 }
                 writer.close();
                 file.close();*/
-                      
-                    
-
         }catch(IOException ex){
             System.out.println(" error no arquivo");
             ex.printStackTrace();

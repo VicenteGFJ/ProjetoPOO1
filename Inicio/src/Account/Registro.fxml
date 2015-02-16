@@ -35,7 +35,7 @@
                   <Button fx:id="finalizarRegistro" layoutX="251.0" layoutY="132.0" mnemonicParsing="false" onAction="#salvarCampos" prefHeight="25.0" prefWidth="74.0" text="Registrar" AnchorPane.bottomAnchor="13.0" />
                </children>
             </HBox>
-            <Label fx:id="campoAviso" alignment="CENTER" layoutX="128.0" layoutY="92.0" prefHeight="17.0" prefWidth="144.0" textFill="#d00b0b" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="60.0" />
+            <Label fx:id="campoRegistro" alignment="CENTER" layoutX="128.0" layoutY="92.0" prefHeight="17.0" prefWidth="144.0" textFill="#d00b0b" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="60.0" />
          </children>
       </AnchorPane>
    </children>
