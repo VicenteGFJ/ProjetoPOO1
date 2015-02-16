@@ -45,7 +45,7 @@ public class LoginController implements Initializable, ControlledScreen {
     }
 
     @FXML
-    public void irParaRegistro(ActionEvent event) {
+    public void irParaRegistro(ActionEvent event) { 
         myController.setScreen(Main.telaRegistro);
     }
 

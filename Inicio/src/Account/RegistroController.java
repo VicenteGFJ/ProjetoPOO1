@@ -63,10 +63,10 @@ public class RegistroController implements Initializable, ControlledScreen {
         try {
             FileWriter myFile = new FileWriter("dados.txt");
             BufferedWriter writer = new BufferedWriter (myFile);
-            writer.write(usuarioReg.getText()+ "/" );
+            writer.write(usuarioReg.getText()+ "/" ); // olha o arquivo txt - ta vazio . . .
             writer.write(senhaReg.getText()+ "\n" );
             campoAviso.setText("Dados salvos com sucesso!");
-            limparCampos();
+          //  limparCampos();
             writer.close();
             
        } catch (IOException ex){
