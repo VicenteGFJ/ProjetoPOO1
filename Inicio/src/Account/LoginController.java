@@ -56,25 +56,22 @@ public class LoginController implements Initializable, ControlledScreen {
     public void irParaRegistro(ActionEvent event) {
         myController.setScreen(Main.telaRegistro);
     }
-
-    @FXML
-    private void irParaPagina1(ActionEvent event) {
-        compararCampos();
+    
+    private void irParaPagina1() {
         myController.setScreen(Main.telaPagina1);
     }
-
-        public void compararCampos() {
+    
+    @FXML
+    public void compararCampos(ActionEvent event) {
         String dados = usuario.getText() + "/" + senha.getText();
 
         recuperarCampos();
 
         if (recuperada.contains(dados)) {
-            //irParaConta();
-            campoLogin.setText("Entrando ....");
+            irParaPagina1();
         } else {
             campoLogin.setText("Usuário e/ou Senha incorretos!");
         }
-
     }
 
     public void recuperarCampos() {
@@ -85,14 +82,12 @@ public class LoginController implements Initializable, ControlledScreen {
             while ((line = reader.readLine()) != null) {
                 recuperada.add(line);
             }
+            reader.close();
+            fileReader.close();
         } catch (IOException ex) {
             System.out.println("Error ao carregar arquivo");
             ex.printStackTrace();
         }
-    }
-
-    public void irParaConta() {
-        //muda de tela aqui
     }
 
 }
