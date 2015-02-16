@@ -12,7 +12,7 @@
       <GridPane layoutX="173.0" layoutY="128.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="255.0">
          <children>
             <Label fx:id="campoLogin" contentDisplay="CENTER" prefHeight="17.0" prefWidth="182.0" textAlignment="CENTER" textFill="#e80909" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="entrar" mnemonicParsing="false" onAction="#irParaPagina1" prefHeight="25.0" prefWidth="74.0" text="Entrar" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="entrar" mnemonicParsing="false" onAction="#compararCampos" prefHeight="25.0" prefWidth="74.0" text="Entrar" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
