@@ -8,6 +8,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -34,6 +35,10 @@ public class RegistroController implements Initializable, ControlledScreen {
 
     @FXML
     private Button voltar;
+    
+    private int cont = 0;
+    
+    private ArrayList<String> lista = new ArrayList<String>();
 
     ScreensController myController;
 
@@ -60,18 +65,15 @@ public class RegistroController implements Initializable, ControlledScreen {
     }
     
     public void salvarCampos(ActionEvent event){
-        try {
-            FileWriter myFile = new FileWriter("dados.txt");
-            BufferedWriter writer = new BufferedWriter (myFile);
-            writer.write(usuarioReg.getText()+ "/" ); // olha o arquivo txt - ta vazio . . .
-            writer.write(senhaReg.getText()+ "\n" );
-            campoAviso.setText("Dados salvos com sucesso!");
-          //  limparCampos();
-            writer.close();
+            String dados = usuarioReg.getText() + "\n" + senhaReg.getText()+"$$"+"\n";
+            lista.add(dados);
+           
+           int data =lista.size();
+           for ( cont=0 ; cont< data ; cont ++){
+               System.out.println(lista.get(cont));
+           }
             
-       } catch (IOException ex){
-           System.out.println(" Dados não foram salvos! ");
-           ex.printStackTrace();    
-       }   
+            campoAviso.setText("Dados salvos com sucesso!");
+    //  cont++; 
     }
 }
