@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Account;
 
 /**
@@ -10,17 +5,16 @@ package Account;
  * @author Vicente
  */
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import static java.lang.System.out;
 import java.net.URL;
+
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -33,7 +27,7 @@ public class RegistroController implements Initializable, ControlledScreen {
     private PasswordField senhaReg;
 
     @FXML
-    private TextField emailReg;
+    private Label campoAviso;
 
     @FXML
     private Button registrar;
@@ -54,8 +48,30 @@ public class RegistroController implements Initializable, ControlledScreen {
     }
 
     @FXML
-    private void voltarLogin(ActionEvent event) {
+    private void voltarLogin(ActionEvent event) { 
+        limparCampos();
         myController.setScreen(Main.telaInicial);
     }
-
+    
+    private void limparCampos (){ //private ou public?
+        usuarioReg.setText("");
+        senhaReg.setText("");
+     //   emailReg.setText("");
+    }
+    
+    public void salvarCampos(ActionEvent event){
+        try {
+            FileWriter myFile = new FileWriter("dados.txt");
+            BufferedWriter writer = new BufferedWriter (myFile);
+            writer.write(usuarioReg.getText()+ "/" );
+            writer.write(senhaReg.getText()+ "\n" );
+            campoAviso.setText("Dados salvos com sucesso!");
+            limparCampos();
+            writer.close();
+            
+       } catch (IOException ex){
+           System.out.println(" Dados não foram salvos! ");
+           ex.printStackTrace();    
+       }   
+    }
 }
