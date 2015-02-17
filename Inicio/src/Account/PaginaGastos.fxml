@@ -4,7 +4,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Account.PaginaGastosController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.PaginaGastosController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -12,9 +12,9 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Pane>
+      <Pane prefHeight="400.0" prefWidth="589.0">
          <children>
-            <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <TabPane prefHeight="353.0" prefWidth="670.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
                 <Tab text="Janeiro">
                      <content>
@@ -40,8 +40,129 @@
                         </TableView>
                      </content>
                   </Tab>
+                  <Tab text="Março">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Abril">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Maio">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Junho">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Julho">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Agosto">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Setembro">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Outubro">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Novembro">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Dezembro">
+                     <content>
+                        <TableView prefHeight="324.0" prefWidth="598.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Data" />
+                              <TableColumn prefWidth="106.0" text="Descrição" />
+                              <TableColumn prefWidth="107.0" text="Categoria" />
+                              <TableColumn prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
               </tabs>
             </TabPane>
+            <Button fx:id="voltarMenu" layoutX="583.0" layoutY="360.0" mnemonicParsing="false" onAction="#irParaPagina1" prefHeight="28.0" prefWidth="62.0" text="Voltar" />
          </children>
       </Pane>
    </children>

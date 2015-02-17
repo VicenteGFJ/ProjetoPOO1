@@ -72,11 +72,6 @@ public class LoginController implements Initializable, ControlledScreen {
         }
     }
 
-    private void limparCampos() {
-        usuario.setText("");
-        senha.setText("");
-    }
-
     public void recuperarCampos() {
         try {
             FileReader fileReader = new FileReader("users.txt");
@@ -91,6 +86,11 @@ public class LoginController implements Initializable, ControlledScreen {
             System.out.println("Error ao carregar arquivo");
             ex.printStackTrace();
         }
+    }
+    
+    private void limparCampos() {
+        usuario.setText("");
+        senha.setText("");
     }
 
 }

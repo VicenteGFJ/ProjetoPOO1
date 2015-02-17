@@ -17,8 +17,12 @@ public class Main extends Application {
     public static String telaRegistroFile = "Registro.fxml";
     public static String telaPagina1 = "Pagina1";
     public static String telaPagina1File = "Pagina1.fxml";
-    public static String telaPaginaGastos = "PaginaGatos";
+    public static String telaPaginaGastos = "PaginaGatos"; // GATOS ??
     public static String telaPaginaGastosFile = "PaginaGastos.fxml";
+    public static String telaPaginaSaldo = "PaginaSaldo"; 
+    public static String telaPaginaSaldosFile = "PaginaSaldo.fxml";
+    public static String telaPaginaAdicionarConta = "PaginaAdicionarConta"; 
+    public static String telaPaginaAdicionarContaFile = "PaginaAdicionarConta.fxml";
     
 
     @Override
@@ -28,6 +32,8 @@ public class Main extends Application {
         telas.loadScreen(Main.telaRegistro, Main.telaRegistroFile);
         telas.loadScreen(Main.telaPagina1, Main.telaPagina1File);
         telas.loadScreen(Main.telaPaginaGastos, Main.telaPaginaGastosFile);
+        telas.loadScreen(Main.telaPaginaSaldo, Main.telaPaginaSaldosFile);
+        telas.loadScreen(Main.telaPaginaAdicionarConta, Main.telaPaginaAdicionarContaFile);
 
         telas.setScreen(Main.telaInicial);
         
