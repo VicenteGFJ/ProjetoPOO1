@@ -8,11 +8,17 @@ and open the template in the editor.
     Author     : Vicente
 */
 
+.background {
+    -fx-background-image: url("background.jpg");
+    //-fx-background-repeat: round;
+    
+}
+
 .button {
     -fx-text-fill: white;
     -fx-font-family: "Arial Narrow";
     -fx-font-weight: bold;
-    -fx-background-color: linear-gradient(#47449b, #353375);
+    -fx-background-color: linear-gradient(#b8b8b8, #4a4a4a);
     -fx-font-size: 10pt;
 
     //-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
@@ -23,8 +29,10 @@ and open the template in the editor.
     -fx-text-fill: white;
     -fx-font-family: "Arial Narrow";
     -fx-font-weight: bold;
-    -fx-background-color: linear-gradient(#353375, #47449b);
+    -fx-background-color: linear-gradient(#4a4a4a, #b8b8b8);
 }
+
+
 
 
 

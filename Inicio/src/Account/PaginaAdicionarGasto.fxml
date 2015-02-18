@@ -14,7 +14,7 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.PaginaAdicionarGastoController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.PaginaAdicionarGastoController">
    <children>
       <GridPane alignment="CENTER" hgap="10" layoutX="179.0" layoutY="141.0" prefHeight="318.0" prefWidth="442.0" vgap="10">
         <columnConstraints>
@@ -31,7 +31,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" />
         </rowConstraints>
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data" textAlignment="CENTER">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Data" textAlignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -52,17 +52,17 @@
             <Button fx:id="salvarGasto" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Salvar" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição" textAlignment="CENTER" GridPane.rowIndex="1">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição" textAlignment="CENTER" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" textAlignment="CENTER" GridPane.rowIndex="2">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" textAlignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Valor" textAlignment="CENTER" GridPane.rowIndex="3">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor" textAlignment="CENTER" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>

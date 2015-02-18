@@ -13,13 +13,13 @@
 <?import javafx.scene.text.*?>
 <?language javascript?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.PaginaExtratoController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.PaginaExtratoController">
    <children>
-      <TabPane prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane prefHeight="600.0" prefWidth="900.0" styleClass="background" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Janeiro">
                <content>
-                  <TableView prefHeight="200.0" prefWidth="200.0">
+                  <TableView prefHeight="200.0" prefWidth="200.0" styleClass="background">
                     <columns>
                       <TableColumn fx:id="data" prefWidth="75.0" text="Data" />
                       <TableColumn fx:id="descricao" prefWidth="106.0" text="Descrição" />
@@ -31,7 +31,7 @@
             </Tab>
             <Tab text="Fevereiro">
                <content>
-                  <TableView prefHeight="200.0" prefWidth="200.0">
+                  <TableView prefHeight="200.0" prefWidth="200.0" styleClass="background">
                      <columns>
                         <TableColumn fx:id="data1" prefWidth="75.0" text="Data" />
                         <TableColumn fx:id="descricao1" prefWidth="106.0" text="Descrição" />

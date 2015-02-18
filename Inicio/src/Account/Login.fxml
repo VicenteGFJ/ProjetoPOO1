@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import java.net.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.LoginController">
+<AnchorPane styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.LoginController">
     <children>
         <Pane prefHeight="600.0" prefWidth="800.0">
             <children>
@@ -37,7 +37,7 @@
                                 <Insets right="100.0" />
                             </GridPane.margin>
                         </Button>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="92.341796875" GridPane.rowIndex="1">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="92.341796875" GridPane.rowIndex="1">
                             <font>
                                 <Font size="15.0" />
                             </font>
@@ -45,7 +45,7 @@
                         <PasswordField fx:id="senha" prefWidth="174.0" promptText="senha" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="usuario" prefHeight="25.0" prefWidth="174.0" promptText="Usuário" GridPane.columnIndex="1" />
                         <Label fx:id="campoLogin" contentDisplay="CENTER" prefHeight="17.0" prefWidth="182.0" textAlignment="CENTER" textFill="#e80909" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" textAlignment="CENTER" wrappingWidth="92.341796875">
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" textAlignment="CENTER" wrappingWidth="92.341796875">
                             <font>
                                 <Font size="15.0" />
                             </font>

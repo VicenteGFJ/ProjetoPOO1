@@ -40,7 +40,7 @@ public class Main extends Application {
         
         Group root = new Group();
         root.getChildren().addAll(telas);
-        Scene scene = new Scene(root, 800, 600);
+        Scene scene = new Scene(root);
         stage.getIcons().add(new Image(getClass().getResourceAsStream("favicon.png")));
         stage.setResizable(false);
         stage.setTitle("Controle Financeiro");

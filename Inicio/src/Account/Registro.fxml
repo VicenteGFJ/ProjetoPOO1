@@ -13,8 +13,7 @@
 <?import javafx.scene.text.*?>
 <?language javascript?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.RegistroController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.RegistroController">
    <children>
       <GridPane alignment="CENTER" layoutX="196.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="408.0">
         <columnConstraints>
@@ -30,19 +29,19 @@
          <children>
             <Button fx:id="finalizarRegistro" mnemonicParsing="false" onAction="#compararSenhas" prefHeight="25.0" prefWidth="74.0" text="Registrar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label fx:id="campoRegistro" alignment="CENTER" prefHeight="17.0" prefWidth="178.0" textFill="#d00b0b" GridPane.rowIndex="3" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar senha" textAlignment="CENTER" wrappingWidth="131.341796875" GridPane.rowIndex="2">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar senha" textAlignment="CENTER" wrappingWidth="131.341796875" GridPane.rowIndex="2">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
             <PasswordField fx:id="confirmarReg" prefHeight="25.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="131.341796875" GridPane.rowIndex="1">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="131.341796875" GridPane.rowIndex="1">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
             <PasswordField fx:id="senhaReg" prefHeight="25.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" textAlignment="CENTER" wrappingWidth="130.341796875">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" textAlignment="CENTER" wrappingWidth="130.341796875">
                <font>
                   <Font size="15.0" />
                </font>
