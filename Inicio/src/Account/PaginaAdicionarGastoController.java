@@ -19,10 +19,7 @@ public class PaginaAdicionarGastoController implements Initializable, Controlled
 
     @FXML
     private Button voltar;
-    
-    @FXML
-            private
-    
+
     ScreensController myController;
 
     @Override

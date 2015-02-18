@@ -21,9 +21,6 @@ public class Pagina1Controller implements Initializable, ControlledScreen {
     private Button deslogar;
     
     @FXML
-    private Button saldo;
-    
-    @FXML
     private Button addGasto;
 
     ScreensController myController;

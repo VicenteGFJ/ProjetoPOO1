@@ -4,7 +4,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.PaginaGastosController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.PaginaExtratoController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -20,10 +20,10 @@
                      <content>
                         <TableView prefHeight="200.0" prefWidth="200.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="Data" />
-                            <TableColumn prefWidth="106.0" text="Descrição" />
-                              <TableColumn prefWidth="107.0" text="Categoria" />
-                              <TableColumn prefWidth="93.0" text="Valor" />
+                            <TableColumn fx:id="data" prefWidth="75.0" text="Data" />
+                            <TableColumn fx:id="descricao" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor" prefWidth="93.0" text="Valor" />
                           </columns>
                         </TableView>
                      </content>
@@ -32,10 +32,130 @@
                      <content>
                         <TableView prefHeight="200.0" prefWidth="200.0">
                            <columns>
-                              <TableColumn prefWidth="75.0" text="Data" />
-                              <TableColumn prefWidth="106.0" text="Descrição" />
-                              <TableColumn prefWidth="107.0" text="Categoria" />
-                              <TableColumn prefWidth="93.0" text="Valor" />
+                              <TableColumn fx:id="data1" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao1" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria1" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor1" prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Março">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="data2" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao2" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria2" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor2" prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Abril">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="data3" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao3" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria3" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor3" prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Maio">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="data4" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao4" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria4" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor4" prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Junho">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="data111" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao111" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria111" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor111" prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Julho">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="data1111111" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao1111111" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria1111111" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor1111111" prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Agosto">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="data1111" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao1111" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria1111" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor1111" prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Setembro">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="data11111" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao11111" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria11111" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor11111" prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Outrubro">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="data111111" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao111111" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria111111" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor111111" prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Novembro">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="data111112" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao111112" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria111112" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor111112" prefWidth="93.0" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </Tab>
+                  <Tab text="Dezembro">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                           <columns>
+                              <TableColumn fx:id="data11111111" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="descricao11111111" prefWidth="106.0" text="Descrição" />
+                              <TableColumn fx:id="categoria11111111" prefWidth="107.0" text="Categoria" />
+                              <TableColumn fx:id="valor11111111" prefWidth="93.0" text="Valor" />
                            </columns>
                         </TableView>
                      </content>
