@@ -8,7 +8,6 @@ import java.io.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -38,10 +37,10 @@ public class RegistroController implements Initializable, ControlledScreen {
     @FXML
     private Button voltar;
     
-    private int cont = 0;
+    private ArrayList<String> usuarios = new ArrayList<>();
     
-    private ArrayList<String> lista = new ArrayList<String>();
-
+    private ArrayList<String> registros = new ArrayList<>();
+    
     ScreensController myController;
 
     @Override
@@ -72,17 +71,33 @@ public class RegistroController implements Initializable, ControlledScreen {
     }
     
     public void salvarCampos(){
-            String data = usuarioReg.getText() + "/" + senhaReg.getText();
-            lista.add(data);
-            campoRegistro.setText("Dados salvos com sucesso!");
-            limparCampos(1);
+            usuarios.add(usuarioReg.getText());
+            
+            if(! (registros.isEmpty() ) ){ // Lista de registros não está vazia
+                if(usuarios.contains(usuarioReg.getText())){
+                    campoRegistro.setText("O usuario escolhido já existe!");
+                    limparCampos(1);
+                }else{
+                    String info = usuarioReg.getText() + "/" + senhaReg.getText();
+                    registros.add(info);
+                    campoRegistro.setText("Dados salvos com sucesso!");
+                    limparCampos(1);
+                }
+                    
+            }else{  // Lista de registros está vazia
+                    String info = usuarioReg.getText() + "/" + senhaReg.getText();
+                    registros.add(info);
+                    campoRegistro.setText("Dados salvos com sucesso!");
+                    limparCampos(1);
+            }
+                        
     }
     public void salvarArquivo(){
         
         try {
                 FileWriter file = new FileWriter ("users.txt");
                 BufferedWriter writer = new BufferedWriter (file);
-                for (String info : lista) {
+                for (String info : registros) {
                     writer.write(info);
                     writer.newLine();
                 }

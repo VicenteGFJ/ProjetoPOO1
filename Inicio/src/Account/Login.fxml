@@ -21,7 +21,7 @@
                </GridPane.margin>
             </Button>
             <Button fx:id="registrar" mnemonicParsing="false" onAction="#irParaRegistro" prefHeight="25.0" prefWidth="74.0" text="Registrar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="usuario" prefHeight="25.0" prefWidth="174.0" promptText="Usuário" GridPane.columnIndex="1" />
+            <TextField fx:id="usuario" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="92.341796875" GridPane.rowIndex="1">
                <font>
                   <Font size="15.0" />
@@ -32,7 +32,7 @@
                   <Font size="15.0" />
                </font>
             </Text>
-            <PasswordField fx:id="senha" promptText="senha" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="senha" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="85.0" />

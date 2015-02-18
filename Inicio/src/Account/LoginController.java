@@ -35,8 +35,8 @@ public class LoginController implements Initializable, ControlledScreen {
 
     ScreensController myController;
 
-    ArrayList<String> recuperada = new ArrayList<>();
-
+    private ArrayList<String> recuperada = new ArrayList<>();
+  
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -59,17 +59,32 @@ public class LoginController implements Initializable, ControlledScreen {
 
     @FXML
     public void compararCampos(ActionEvent event) {
-        String dados = usuario.getText() + "/" + senha.getText();
-
-        recuperarCampos();
-
-        if (recuperada.contains(dados)) {
+        if(usuario.getText().equals("") && senha.getText().equals("")){
+            campoLogin.setText("Campos usuário e senha vazios!");
             limparCampos();
-            irParaPagina1();
-        } else {
-            limparCampos();
-            campoLogin.setText("Usuário e/ou Senha incorretos!");
         }
+        else if(senha.getText().equals("")) {
+            campoLogin.setText("Campo senha vazio!");
+            limparCampos();
+        }
+            else if(usuario.getText().equals("")){
+                campoLogin.setText("Campo usuário vazio!");
+                limparCampos();
+            }
+                else{              
+                    String dados = usuario.getText() + "/" + senha.getText();
+
+                    recuperarCampos();
+
+                    if (recuperada.contains(dados)) {
+                        limparCampos();
+                        irParaPagina1();
+                    } else {
+                        limparCampos();
+                        campoLogin.setText("Usuário e/ou Senha incorretos!");
+                    }
+                }
+        
     }
 
     public void recuperarCampos() {
