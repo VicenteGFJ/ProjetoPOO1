@@ -70,8 +70,7 @@ public class RegistroController implements Initializable, ControlledScreen {
         }
     }
     
-    public void salvarCampos(){
-            usuarios.add(usuarioReg.getText());
+   public void salvarCampos(){
             
             if(! (registros.isEmpty() ) ){ // Lista de registros não está vazia
                 if(usuarios.contains(usuarioReg.getText())){
@@ -79,13 +78,19 @@ public class RegistroController implements Initializable, ControlledScreen {
                     limparCampos(1);
                 }else{
                     String info = usuarioReg.getText() + "/" + senhaReg.getText();
+                    
+                    usuarios.add(usuarioReg.getText());
                     registros.add(info);
+                   
                     campoRegistro.setText("Dados salvos com sucesso!");
                     limparCampos(1);
+                    
                 }
                     
             }else{  // Lista de registros está vazia
+                    
                     String info = usuarioReg.getText() + "/" + senhaReg.getText();
+                    usuarios.add(usuarioReg.getText());
                     registros.add(info);
                     campoRegistro.setText("Dados salvos com sucesso!");
                     limparCampos(1);
