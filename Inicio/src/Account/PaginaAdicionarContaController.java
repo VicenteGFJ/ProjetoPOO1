@@ -12,14 +12,18 @@ import javafx.fxml.Initializable;
  *
  * @author Cecília Assis
  */
-public class PaginaAdicionarContaController implements Initializable {
+public class PaginaAdicionarContaController implements Initializable, ControlledScreen {
 
-    /**
-     * Initializes the controller class.
-     */
+    ScreensController myController;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @Override
+    public void setScreenParent(ScreensController screenParent) {
+        myController = screenParent;
+    }
     
 }

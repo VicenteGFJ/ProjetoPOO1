@@ -12,6 +12,18 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
-public class PaginaSaldoController {
+public class PaginaSaldoController implements Initializable, ControlledScreen {
+
+    ScreensController myController;
+    
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        
+    }
+
+    @Override
+    public void setScreenParent(ScreensController screenParent) {
+        myController = screenParent;
+    }
     
 }
