@@ -6,44 +6,56 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import java.net.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.LoginController">
-   <children>
-      <GridPane layoutX="173.0" layoutY="128.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="255.0">
-         <children>
-            <Label fx:id="campoLogin" contentDisplay="CENTER" prefHeight="17.0" prefWidth="182.0" textAlignment="CENTER" textFill="#e80909" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="entrar" mnemonicParsing="false" onAction="#compararCampos" prefHeight="25.0" prefWidth="74.0" text="Entrar" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <GridPane.margin>
-                  <Insets left="105.0" />
-               </GridPane.margin>
-            </Button>
-            <Button fx:id="registrar" mnemonicParsing="false" onAction="#irParaRegistro" prefHeight="25.0" prefWidth="74.0" text="Registrar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="usuario" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="1" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="92.341796875" GridPane.rowIndex="1">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" textAlignment="CENTER" wrappingWidth="92.341796875">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
-            <PasswordField fx:id="senha" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-         </children>
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="85.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="187.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
-      </GridPane>
-   </children>
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.LoginController">
+    <children>
+        <Pane prefHeight="600.0" prefWidth="800.0">
+            <children>
+                <GridPane alignment="CENTER" layoutX="206.0" layoutY="184.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0" prefWidth="388.0">
+                    <columnConstraints>
+                        <ColumnConstraints fillWidth="false" halignment="CENTER" />
+                        <ColumnConstraints fillWidth="false" halignment="CENTER" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints fillHeight="false" prefHeight="40.0" valignment="CENTER" />
+                        <RowConstraints fillHeight="false" prefHeight="40.0" valignment="CENTER" />
+                        <RowConstraints fillHeight="false" prefHeight="30.0" />
+                        <RowConstraints prefHeight="30.0" />
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="entrar" mnemonicParsing="false" onAction="#compararCampos" prefHeight="25.0" prefWidth="72.0" text="Entrar" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <GridPane.margin>
+                                <Insets left="100.0" />
+                            </GridPane.margin>
+                        </Button>
+                        <Button fx:id="registrar" mnemonicParsing="false" onAction="#irParaRegistro" prefHeight="25.0" prefWidth="74.0" text="Registrar" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets right="100.0" />
+                            </GridPane.margin>
+                        </Button>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="92.341796875" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Text>
+                        <PasswordField fx:id="senha" prefWidth="174.0" promptText="senha" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="usuario" prefHeight="25.0" prefWidth="174.0" promptText="Usuário" GridPane.columnIndex="1" />
+                        <Label fx:id="campoLogin" contentDisplay="CENTER" prefHeight="17.0" prefWidth="182.0" textAlignment="CENTER" textFill="#e80909" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" textAlignment="CENTER" wrappingWidth="92.341796875">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </GridPane>
+            </children>
+        </Pane>
+    </children>
+    <stylesheets>
+        <URL value="@back.css" />
+    </stylesheets>
 </AnchorPane>

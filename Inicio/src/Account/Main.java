@@ -1,8 +1,10 @@
 package Account;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -26,17 +28,22 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) /*throws Exception*/ {
         ScreensController telas = new ScreensController();
+       
         telas.loadScreen(Main.telaInicial, Main.telaInicialFile);
         telas.loadScreen(Main.telaRegistro, Main.telaRegistroFile);
         telas.loadScreen(Main.telaPagina1, Main.telaPagina1File);
         telas.loadScreen(Main.telaPaginaExtrato, Main.telaPaginaExtratoFile);
         telas.loadScreen(Main.telaPaginaAdicionarGasto, Main.telaPaginaAdicionarGastoFile);
+        
 
         telas.setScreen(Main.telaInicial);
         
         Group root = new Group();
         root.getChildren().addAll(telas);
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 800, 600);
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("favicon.png")));
+        stage.setResizable(false);
+        stage.setTitle("Controle Financeiro");
         stage.setScene(scene);
         stage.show();
     }

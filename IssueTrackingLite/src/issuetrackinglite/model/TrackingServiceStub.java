@@ -54,7 +54,7 @@ public class TrackingServiceStub implements TrackingService {
     {
         final Map<String, ObservableList<String>> map = new TreeMap<String, ObservableList<String>>();
         projectsMap = FXCollections.observableMap(map);
-        for (String s : newList("Project1", "Project2", "Project3", "Project4")) {
+        for (String s : newList("Janeiro", "Fevereiro", "Março", "Abril")) {
             projectsMap.put(s, FXCollections.<String>observableArrayList());
         }
     }
@@ -185,10 +185,10 @@ public class TrackingServiceStub implements TrackingService {
         issuesMap = FXCollections.observableMap(map);
         issuesMap.addListener(issuesMapChangeListener);
         IssueStub ts;
-        ts = createIssueFor("Project1");
+        ts = createIssueFor("Janeiro");
         ts.setSynopsis("We rode in sorrow, with strong hounds three");
         ts.setDescription("From \"The Wanderings Of Oisin\".\nW. B. Yeats.");
-        ts = createIssueFor("Project1");
+        ts = createIssueFor("Janeiro");
         ts.setSynopsis("Bran, Sgeolan, and Lomair");
         ts.setDescription("From \"The Wanderings Of Oisin\".\nW. B. Yeats.");
         ts = createIssueFor("Project2");

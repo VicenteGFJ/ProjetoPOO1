@@ -1,52 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?language javascript?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.RegistroController">
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.RegistroController">
    <children>
-      <AnchorPane layoutX="104.0" layoutY="91.0" prefHeight="206.0" prefWidth="383.0">
+      <GridPane alignment="CENTER" layoutX="196.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="408.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+        </rowConstraints>
          <children>
-            <HBox layoutY="52.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <children>
-                  <Text layoutX="130.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="131.341796875">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Text>
-                  <PasswordField fx:id="senhaReg" layoutX="223.0" layoutY="168.0" prefHeight="25.0" prefWidth="247.0" />
-               </children>
-            </HBox>
-            <HBox layoutY="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <children>
-                  <Text layoutX="130.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" textAlignment="CENTER" wrappingWidth="130.341796875">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="usuarioReg" layoutX="223.0" layoutY="131.0" prefHeight="25.0" prefWidth="247.0" />
-               </children>
-            </HBox>
-            <HBox layoutX="136.0" layoutY="166.0" prefHeight="25.0" prefWidth="247.0" spacing="100.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="0.0">
-               <children>
-                  <Button fx:id="voltar" layoutX="76.0" layoutY="132.0" mnemonicParsing="false" onAction="#voltarLogin" prefHeight="25.0" prefWidth="74.0" text="Voltar" AnchorPane.bottomAnchor="13.0" />
-                  <Button fx:id="finalizarRegistro" layoutX="251.0" layoutY="132.0" mnemonicParsing="false" onAction="#compararSenhas" prefHeight="25.0" prefWidth="74.0" text="Registrar" AnchorPane.bottomAnchor="13.0" />
-               </children>
-            </HBox>
-            <Label fx:id="campoRegistro" alignment="CENTER" layoutX="151.0" layoutY="137.0" prefHeight="17.0" prefWidth="144.0" textFill="#d00b0b" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="37.0" />
-            <HBox layoutY="95.0" prefHeight="42.0" prefWidth="383.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <children>
-                  <Text layoutX="130.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar senha" textAlignment="CENTER" wrappingWidth="131.341796875">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Text>
-                  <PasswordField fx:id="confirmarReg" layoutX="223.0" layoutY="168.0" prefHeight="25.0" prefWidth="247.0" />
-               </children>
-            </HBox>
+            <Button fx:id="finalizarRegistro" mnemonicParsing="false" onAction="#compararSenhas" prefHeight="25.0" prefWidth="74.0" text="Registrar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="campoRegistro" alignment="CENTER" prefHeight="17.0" prefWidth="178.0" textFill="#d00b0b" GridPane.rowIndex="3" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar senha" textAlignment="CENTER" wrappingWidth="131.341796875" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="confirmarReg" prefHeight="25.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textAlignment="CENTER" wrappingWidth="131.341796875" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="senhaReg" prefHeight="25.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" textAlignment="CENTER" wrappingWidth="130.341796875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="usuarioReg" prefHeight="25.0" prefWidth="247.0" GridPane.columnIndex="1" />
          </children>
-      </AnchorPane>
+      </GridPane>
+      <Button fx:id="voltar" layoutX="646.0" layoutY="546.0" mnemonicParsing="false" onAction="#voltarLogin" prefHeight="40.0" prefWidth="140.0" text="Voltar" />
    </children>
-</Pane>
+   <stylesheets>
+        <URL value="@back.css" />
+    </stylesheets>
+</AnchorPane>

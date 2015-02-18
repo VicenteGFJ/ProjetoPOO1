@@ -7,67 +7,71 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.collections.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.PaginaAdicionarGastoController">
-    <children>
-        <GridPane alignment="CENTER" layoutX="123.0" layoutY="78.0" prefHeight="218.0" prefWidth="354.0">
-            <columnConstraints>
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            </columnConstraints>
-            <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            </rowConstraints>
-            <children>
-                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <Button fx:id="salvarGasto" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Salvar" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data" textAlignment="CENTER">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição" textAlignment="CENTER" GridPane.rowIndex="1">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" textAlignment="CENTER" GridPane.rowIndex="2">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Text>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Valor" textAlignment="CENTER" GridPane.rowIndex="3">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Text>
-                <ChoiceBox fx:id="categoria" prefHeight="25.0" prefWidth="199.0" GridPane.columnIndex="1" GridPane.rowIndex="2">   
-                    <items>
-                        <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="" />
-                            <String fx:value="Alimentação" />
-                            <String fx:value="Transporte" />
-                            <String fx:value="Serviços" />
-                            <String fx:value="Saúde" />
-                            <String fx:value="Lazer" />
-                            </FXCollections>
-                    </items>
-                    
-                    </ChoiceBox>
-            <HBox alignment="CENTER" GridPane.columnIndex="1">
-               <children>
-                  <ChoiceBox fx:id="dia" prefHeight="25.0" prefWidth="42.0" GridPane.columnIndex="1" />
-                  <ChoiceBox fx:id="mes" prefHeight="25.0" prefWidth="81.0" GridPane.columnIndex="2" />
-                  <ChoiceBox fx:id="ano" prefHeight="25.0" prefWidth="55.0" GridPane.columnIndex="3" />
-               </children>
-            </HBox>
-            </children>
-        </GridPane>
-        <Button fx:id="voltar" layoutX="482.0" layoutY="336.0" mnemonicParsing="false" onAction="#irParaPagina1" prefHeight="50.0" prefWidth="104.0" text="Voltar" />
-    </children>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.PaginaAdicionarGastoController">
+   <children>
+      <GridPane alignment="CENTER" hgap="10" layoutX="179.0" layoutY="141.0" prefHeight="318.0" prefWidth="442.0" vgap="10">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" />
+        </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <DatePicker GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="categoria" prefHeight="25.0" prefWidth="199.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="" />
+                     <String fx:value="Alimentação" />
+                     <String fx:value="Transporte" />
+                     <String fx:value="Serviços" />
+                     <String fx:value="Saúde" />
+                     <String fx:value="Lazer" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <Button fx:id="salvarGasto" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Salvar" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria" textAlignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Valor" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <Button fx:id="voltar" layoutX="646.0" layoutY="546.0" mnemonicParsing="false" onAction="#irParaPagina1" prefHeight="40.0" prefWidth="140.0" text="Voltar" />
+   </children>
+   <stylesheets>
+        <URL value="@back.css" />
+    </stylesheets>
 </AnchorPane>

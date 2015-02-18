@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?language javascript?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.Pagina1Controller">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Account.Pagina1Controller">
    <children>
-      <Pane prefHeight="200.0" prefWidth="200.0">
+      <Button fx:id="deslogar" layoutX="646.0" layoutY="546.0" mnemonicParsing="false" onAction="#voltarLogin" prefHeight="40.0" prefWidth="140.0" text="Deslogar" />
+      <GridPane layoutX="116.0" layoutY="143.0" prefHeight="314.0" prefWidth="585.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+        </rowConstraints>
          <children>
-            <HBox layoutX="18.0" layoutY="142.0" spacing="111.0" />
-            <Button fx:id="deslogar" layoutX="412.0" layoutY="354.0" mnemonicParsing="false" onAction="#voltarLogin" prefHeight="36.0" prefWidth="138.0" text="Deslogar" />
-            <Button fx:id="gastos" layoutX="422.0" layoutY="148.0" mnemonicParsing="false" onAction="#irParaExtrato" prefHeight="71.0" prefWidth="128.0" text="Extrato" />
-            <Button fx:id="addGasto" layoutX="105.0" layoutY="148.0" mnemonicParsing="false" onAction="#irParaAdicionarGasto" prefHeight="71.0" prefWidth="128.0" text="Adicionar Gasto" />
+            <Button fx:id="gastos" mnemonicParsing="false" onAction="#irParaExtrato" prefHeight="71.0" prefWidth="128.0" text="Extrato" GridPane.columnIndex="1" />
+            <Button fx:id="addGasto" mnemonicParsing="false" onAction="#irParaAdicionarGasto" prefHeight="71.0" prefWidth="128.0" text="Adicionar Gasto" />
          </children>
-      </Pane>
+      </GridPane>
    </children>
-</GridPane>
+   <stylesheets>
+        <URL value="@back.css" />
+    </stylesheets>
+</AnchorPane>
