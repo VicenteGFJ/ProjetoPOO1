@@ -24,7 +24,7 @@ public class Pagina1Controller implements Initializable, ControlledScreen {
     private Button saldo;
     
     @FXML
-    private Button addConta;
+    private Button addGasto;
 
     ScreensController myController;
 
@@ -44,18 +44,13 @@ public class Pagina1Controller implements Initializable, ControlledScreen {
     }
     
     @FXML
-    private void irParaGastos(ActionEvent event) {
-        myController.setScreen(Main.telaPaginaGastos);
+    private void irParaExtrato(ActionEvent event) {
+        myController.setScreen(Main.telaPaginaExtrato);
     }
     
     @FXML
-    private void irParaConsultarSaldo(ActionEvent event) {
-        myController.setScreen(Main.telaPaginaSaldo);
-    }
-    
-    @FXML
-    private void irParaAdicionarConta(ActionEvent event) {
-        myController.setScreen(Main.telaPaginaAdicionarConta);
+    private void irParaAdicionarGasto(ActionEvent event) {
+        myController.setScreen(Main.telaPaginaAdicionarGasto);
     }
 
 }
